@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF38814324B52AE700E4217D /* DiscDA.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF38814224B52AE700E4217D /* DiscDA.swift */; };
+		BF38814524B5302600E4217D /* TrackDA.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF38814424B5302600E4217D /* TrackDA.swift */; };
+		BF38814724B5329800E4217D /* DiscBL.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF38814624B5329800E4217D /* DiscBL.swift */; };
+		BF38814924B53F3700E4217D /* TrackBL.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF38814824B53F3700E4217D /* TrackBL.swift */; };
+		BF38814B24B540B800E4217D /* Admin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF38814A24B540B800E4217D /* Admin.storyboard */; };
 		BF71652D24B2A2E6001285FB /* CSMTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71650E24B2A2E6001285FB /* CSMTextView.swift */; };
 		BF71652E24B2A2E6001285FB /* CSMLocalAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71650F24B2A2E6001285FB /* CSMLocalAuthentication.swift */; };
 		BF71652F24B2A2E6001285FB /* CSMLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71651024B2A2E6001285FB /* CSMLabel.swift */; };
@@ -40,6 +45,7 @@
 		BF71654B24B2A2E6001285FB /* CSMString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71652C24B2A2E6001285FB /* CSMString.swift */; };
 		BF71655324B2A569001285FB /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF71655224B2A569001285FB /* Start.storyboard */; };
 		BF71655524B2A80B001285FB /* DiscViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71655424B2A80B001285FB /* DiscViewController.swift */; };
+		BF71655924B2D645001285FB /* StartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71655824B2D645001285FB /* StartCollectionViewCell.swift */; };
 		BF760CF824AEE208008377B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF760CF724AEE208008377B6 /* AppDelegate.swift */; };
 		BF760CFA24AEE208008377B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF760CF924AEE208008377B6 /* SceneDelegate.swift */; };
 		BF760D0224AEE208008377B6 /* FinalTestIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF760D0024AEE208008377B6 /* FinalTestIOS.xcdatamodeld */; };
@@ -48,6 +54,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF38814224B52AE700E4217D /* DiscDA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscDA.swift; sourceTree = "<group>"; };
+		BF38814424B5302600E4217D /* TrackDA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDA.swift; sourceTree = "<group>"; };
+		BF38814624B5329800E4217D /* DiscBL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscBL.swift; sourceTree = "<group>"; };
+		BF38814824B53F3700E4217D /* TrackBL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackBL.swift; sourceTree = "<group>"; };
+		BF38814A24B540B800E4217D /* Admin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Admin.storyboard; sourceTree = "<group>"; };
 		BF71650E24B2A2E6001285FB /* CSMTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMTextView.swift; sourceTree = "<group>"; };
 		BF71650F24B2A2E6001285FB /* CSMLocalAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMLocalAuthentication.swift; sourceTree = "<group>"; };
 		BF71651024B2A2E6001285FB /* CSMLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMLabel.swift; sourceTree = "<group>"; };
@@ -81,6 +92,7 @@
 		BF71652C24B2A2E6001285FB /* CSMString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMString.swift; sourceTree = "<group>"; };
 		BF71655224B2A569001285FB /* Start.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
 		BF71655424B2A80B001285FB /* DiscViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscViewController.swift; sourceTree = "<group>"; };
+		BF71655824B2D645001285FB /* StartCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCollectionViewCell.swift; sourceTree = "<group>"; };
 		BF760CF424AEE208008377B6 /* FinalTestIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalTestIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF760CF724AEE208008377B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF760CF924AEE208008377B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				BF71655224B2A569001285FB /* Start.storyboard */,
+				BF38814A24B540B800E4217D /* Admin.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -152,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				BF71655124B2A4C5001285FB /*  Discs */,
+				BF71655824B2D645001285FB /* StartCollectionViewCell.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -159,6 +173,8 @@
 		BF71654E24B2A33D001285FB /* BL */ = {
 			isa = PBXGroup;
 			children = (
+				BF38814624B5329800E4217D /* DiscBL.swift */,
+				BF38814824B53F3700E4217D /* TrackBL.swift */,
 			);
 			path = BL;
 			sourceTree = "<group>";
@@ -166,6 +182,8 @@
 		BF71654F24B2A348001285FB /* DA */ = {
 			isa = PBXGroup;
 			children = (
+				BF38814224B52AE700E4217D /* DiscDA.swift */,
+				BF38814424B5302600E4217D /* TrackDA.swift */,
 			);
 			path = DA;
 			sourceTree = "<group>";
@@ -271,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF760D0724AEE20A008377B6 /* LaunchScreen.storyboard in Resources */,
+				BF38814B24B540B800E4217D /* Admin.storyboard in Resources */,
 				BF760D0424AEE20A008377B6 /* Assets.xcassets in Resources */,
 				BF71655324B2A569001285FB /* Start.storyboard in Resources */,
 				BF71653824B2A2E6001285FB /* .gitkeep in Resources */,
@@ -287,6 +306,8 @@
 				BF71653524B2A2E6001285FB /* CSMKeyChain.swift in Sources */,
 				BF71653F24B2A2E6001285FB /* CSMTextField.swift in Sources */,
 				BF71653224B2A2E6001285FB /* CSMBluetoothManager.swift in Sources */,
+				BF38814324B52AE700E4217D /* DiscDA.swift in Sources */,
+				BF71655924B2D645001285FB /* StartCollectionViewCell.swift in Sources */,
 				BF71653A24B2A2E6001285FB /* CSMImage.swift in Sources */,
 				BF71654624B2A2E6001285FB /* CSMUserAlters.swift in Sources */,
 				BF71652F24B2A2E6001285FB /* CSMLabel.swift in Sources */,
@@ -294,6 +315,7 @@
 				BF71653324B2A2E6001285FB /* CSMColorManager.swift in Sources */,
 				BF71653D24B2A2E6001285FB /* CSMCircularInfinityCollectionView.swift in Sources */,
 				BF71654B24B2A2E6001285FB /* CSMString.swift in Sources */,
+				BF38814724B5329800E4217D /* DiscBL.swift in Sources */,
 				BF71654024B2A2E6001285FB /* CSMButton.swift in Sources */,
 				BF71654224B2A2E6001285FB /* CSMCustomCollectionViewVerticalLayout.swift in Sources */,
 				BF71653C24B2A2E6001285FB /* CSMPageControl.swift in Sources */,
@@ -304,12 +326,14 @@
 				BF71654724B2A2E6001285FB /* CSMWebServiceManager.swift in Sources */,
 				BF71653024B2A2E6001285FB /* CSMDateManager.swift in Sources */,
 				BF71653924B2A2E6001285FB /* CSMCustomStarsView.swift in Sources */,
+				BF38814524B5302600E4217D /* TrackDA.swift in Sources */,
 				BF760CF824AEE208008377B6 /* AppDelegate.swift in Sources */,
 				BF71654424B2A2E6001285FB /* CSMSwitch.swift in Sources */,
 				BF760D0224AEE208008377B6 /* FinalTestIOS.xcdatamodeld in Sources */,
 				BF71654824B2A2E6001285FB /* CSMSlider.swift in Sources */,
 				BF71653624B2A2E6001285FB /* CSMLocalNotificationManager.swift in Sources */,
 				BF71652D24B2A2E6001285FB /* CSMTextView.swift in Sources */,
+				BF38814924B53F3700E4217D /* TrackBL.swift in Sources */,
 				BF71654524B2A2E6001285FB /* CSMLocationManager.swift in Sources */,
 				BF71654124B2A2E6001285FB /* CSMTableView.swift in Sources */,
 				BF71654A24B2A2E6001285FB /* CSMView.swift in Sources */,

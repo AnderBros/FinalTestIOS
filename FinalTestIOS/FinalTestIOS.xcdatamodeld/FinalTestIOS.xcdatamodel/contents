@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Disc" representedClassName="Disc" syncable="YES" codeGenerationType="class">
+        <attribute name="disc_artist" optional="YES" attributeType="String"/>
+        <attribute name="disc_description" optional="YES" attributeType="String"/>
+        <attribute name="disc_favoriteState" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="disc_genre" optional="YES" attributeType="String"/>
+        <attribute name="disc_name" optional="YES" attributeType="String"/>
+        <attribute name="disc_urlImage" optional="YES" attributeType="String"/>
+        <attribute name="disc_year" optional="YES" attributeType="String"/>
+        <relationship name="disc_tracks" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Track" inverseName="track_disc" inverseEntity="Track"/>
+    </entity>
+    <entity name="Track" representedClassName="Track" syncable="YES" codeGenerationType="class">
+        <attribute name="track_duration" optional="YES" attributeType="String"/>
+        <attribute name="track_name" optional="YES" attributeType="String"/>
+        <relationship name="track_disc" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Disc" inverseName="disc_tracks" inverseEntity="Disc"/>
+    </entity>
+    <elements>
+        <element name="Disc" positionX="-63" positionY="-18" width="128" height="163"/>
+        <element name="Track" positionX="-54" positionY="45" width="128" height="88"/>
+    </elements>
 </model>
