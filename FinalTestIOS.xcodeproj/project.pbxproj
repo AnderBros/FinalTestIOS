@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF32278D24B69734005D9F26 /* DiscTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32278C24B69734005D9F26 /* DiscTableViewCell.swift */; };
+		BF32278F24B69BCC005D9F26 /* AddDiscViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32278E24B69BCC005D9F26 /* AddDiscViewController.swift */; };
 		BF38814324B52AE700E4217D /* DiscDA.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF38814224B52AE700E4217D /* DiscDA.swift */; };
 		BF38814524B5302600E4217D /* TrackDA.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF38814424B5302600E4217D /* TrackDA.swift */; };
 		BF38814724B5329800E4217D /* DiscBL.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF38814624B5329800E4217D /* DiscBL.swift */; };
@@ -54,6 +56,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF32278C24B69734005D9F26 /* DiscTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscTableViewCell.swift; sourceTree = "<group>"; };
+		BF32278E24B69BCC005D9F26 /* AddDiscViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiscViewController.swift; sourceTree = "<group>"; };
 		BF38814224B52AE700E4217D /* DiscDA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscDA.swift; sourceTree = "<group>"; };
 		BF38814424B5302600E4217D /* TrackDA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDA.swift; sourceTree = "<group>"; };
 		BF38814624B5329800E4217D /* DiscBL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscBL.swift; sourceTree = "<group>"; };
@@ -192,6 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				BF71655424B2A80B001285FB /* DiscViewController.swift */,
+				BF32278C24B69734005D9F26 /* DiscTableViewCell.swift */,
+				BF32278E24B69BCC005D9F26 /* AddDiscViewController.swift */,
 			);
 			path = " Discs";
 			sourceTree = "<group>";
@@ -305,6 +311,7 @@
 			files = (
 				BF71653524B2A2E6001285FB /* CSMKeyChain.swift in Sources */,
 				BF71653F24B2A2E6001285FB /* CSMTextField.swift in Sources */,
+				BF32278F24B69BCC005D9F26 /* AddDiscViewController.swift in Sources */,
 				BF71653224B2A2E6001285FB /* CSMBluetoothManager.swift in Sources */,
 				BF38814324B52AE700E4217D /* DiscDA.swift in Sources */,
 				BF71655924B2D645001285FB /* StartCollectionViewCell.swift in Sources */,
@@ -327,6 +334,7 @@
 				BF71653024B2A2E6001285FB /* CSMDateManager.swift in Sources */,
 				BF71653924B2A2E6001285FB /* CSMCustomStarsView.swift in Sources */,
 				BF38814524B5302600E4217D /* TrackDA.swift in Sources */,
+				BF32278D24B69734005D9F26 /* DiscTableViewCell.swift in Sources */,
 				BF760CF824AEE208008377B6 /* AppDelegate.swift in Sources */,
 				BF71654424B2A2E6001285FB /* CSMSwitch.swift in Sources */,
 				BF760D0224AEE208008377B6 /* FinalTestIOS.xcdatamodeld in Sources */,

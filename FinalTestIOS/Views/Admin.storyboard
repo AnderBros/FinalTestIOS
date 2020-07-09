@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uIT-DI-kz8">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,20 +7,252 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Discos-->
         <scene sceneID="pQC-xn-H2X">
             <objects>
-                <viewController id="uIT-DI-kz8" sceneMemberID="viewController">
+                <viewController id="uIT-DI-kz8" customClass="DiscViewController" customModule="FinalTestIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k0q-rl-f8c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="TNa-6o-OI7">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YqO-hh-11V">
+                                <rect key="frame" x="0.0" y="144" width="414" height="752"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DiscTableViewCell" rowHeight="101" id="uVZ-Ve-lPE" customClass="DiscTableViewCell" customModule="FinalTestIOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="101"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uVZ-Ve-lPE" id="ICU-mN-QAx">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="101"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NombreDisco" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5S-Uy-lr2">
+                                                    <rect key="frame" x="20" y="20" width="374" height="28.5"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NombreArtista" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ck4-QC-WLq">
+                                                    <rect key="frame" x="20" y="56.5" width="374" height="25.5"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorGujarati-Light" family="Kohinoor Gujarati" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="i5S-Uy-lr2" secondAttribute="trailing" constant="20" id="6Zy-U9-Szy"/>
+                                                <constraint firstItem="i5S-Uy-lr2" firstAttribute="top" secondItem="ICU-mN-QAx" secondAttribute="top" constant="20" id="6aJ-Dx-rUr"/>
+                                                <constraint firstItem="ck4-QC-WLq" firstAttribute="trailing" secondItem="i5S-Uy-lr2" secondAttribute="trailing" id="Btu-bc-PBl"/>
+                                                <constraint firstItem="ck4-QC-WLq" firstAttribute="top" secondItem="i5S-Uy-lr2" secondAttribute="bottom" constant="8" id="UU5-qR-y0E"/>
+                                                <constraint firstItem="ck4-QC-WLq" firstAttribute="leading" secondItem="i5S-Uy-lr2" secondAttribute="leading" id="p3U-Bd-Zx6"/>
+                                                <constraint firstItem="i5S-Uy-lr2" firstAttribute="leading" secondItem="ICU-mN-QAx" secondAttribute="leading" constant="20" id="xWz-O3-YKW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblArtist" destination="ck4-QC-WLq" id="hHF-2i-UuU"/>
+                                            <outlet property="lblNameDisc" destination="i5S-Uy-lr2" id="PmA-3d-VLo"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="uIT-DI-kz8" id="xe6-Gx-2dJ"/>
+                                    <outlet property="delegate" destination="uIT-DI-kz8" id="qWI-JF-HHY"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="YqO-hh-11V" firstAttribute="leading" secondItem="x9p-Mv-xjB" secondAttribute="leading" id="0GS-Tz-5DK"/>
+                            <constraint firstItem="TNa-6o-OI7" firstAttribute="trailing" secondItem="x9p-Mv-xjB" secondAttribute="trailing" id="Dzl-Fb-FUj"/>
+                            <constraint firstItem="YqO-hh-11V" firstAttribute="top" secondItem="TNa-6o-OI7" secondAttribute="bottom" id="TFw-9e-aoo"/>
+                            <constraint firstItem="TNa-6o-OI7" firstAttribute="top" secondItem="x9p-Mv-xjB" secondAttribute="top" id="UFY-HH-gW8"/>
+                            <constraint firstAttribute="bottom" secondItem="YqO-hh-11V" secondAttribute="bottom" id="kQ5-S6-kgt"/>
+                            <constraint firstItem="TNa-6o-OI7" firstAttribute="leading" secondItem="x9p-Mv-xjB" secondAttribute="leading" id="tHp-2V-4Vl"/>
+                            <constraint firstItem="YqO-hh-11V" firstAttribute="trailing" secondItem="x9p-Mv-xjB" secondAttribute="trailing" id="v91-xJ-hDQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="x9p-Mv-xjB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Discos" id="Yyc-ah-Z0U">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3sm-6L-mpJ">
+                            <connections>
+                                <segue destination="dP7-oF-Ojt" kind="show" id="Myj-46-nvz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tlbDisc" destination="YqO-hh-11V" id="fph-nM-gGe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dAg-Yd-Hxr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="191" y="74"/>
+            <point key="canvasLocation" x="2008.6956521739132" y="73.660714285714278"/>
+        </scene>
+        <!--Agregar-->
+        <scene sceneID="jrJ-cl-SVp">
+            <objects>
+                <viewController id="dP7-oF-Ojt" customClass="AddDiscViewController" customModule="FinalTestIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DE2-cx-ymu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HkE-mb-AqZ">
+                                <rect key="frame" x="20" y="118" width="374" height="30"/>
+                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NH7-vB-C8M">
+                                <rect key="frame" x="20" y="156" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artista:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="818-ni-piC">
+                                <rect key="frame" x="20" y="210" width="374" height="30"/>
+                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zs1-h7-lbc">
+                                <rect key="frame" x="20" y="248" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Género:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfY-nX-OJ3">
+                                <rect key="frame" x="20" y="302" width="374" height="30"/>
+                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LiQ-A4-lnl">
+                                <rect key="frame" x="20" y="340" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Año:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pww-J8-e50">
+                                <rect key="frame" x="20" y="394" width="374" height="30"/>
+                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oAv-Wc-fgl">
+                                <rect key="frame" x="20" y="432" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descripción:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYW-Pv-Y5X">
+                                <rect key="frame" x="20" y="486" width="374" height="30"/>
+                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yb0-qS-02z">
+                                <rect key="frame" x="20" y="524" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Url de imagen:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZ9-SV-KEJ">
+                                <rect key="frame" x="20" y="578" width="374" height="30"/>
+                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RlV-bu-0YU">
+                                <rect key="frame" x="20" y="616" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="myY-ar-Jp8">
+                                <rect key="frame" x="139.5" y="690" width="135" height="40"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="O7j-Sb-KPY"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="0.0" maxX="40" maxY="0.0"/>
+                                <state key="normal" title="Agregar"/>
+                                <connections>
+                                    <action selector="clickBtnAddBrand:" destination="dP7-oF-Ojt" eventType="touchUpInside" id="nPZ-LP-cqO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="yb0-qS-02z" firstAttribute="leading" secondItem="kYW-Pv-Y5X" secondAttribute="leading" id="11t-Bt-sL3"/>
+                            <constraint firstItem="yb0-qS-02z" firstAttribute="top" secondItem="kYW-Pv-Y5X" secondAttribute="bottom" constant="8" id="17I-UH-zcm"/>
+                            <constraint firstItem="pfY-nX-OJ3" firstAttribute="top" secondItem="zs1-h7-lbc" secondAttribute="bottom" constant="20" id="2Dj-pM-zId"/>
+                            <constraint firstItem="kYW-Pv-Y5X" firstAttribute="trailing" secondItem="oAv-Wc-fgl" secondAttribute="trailing" id="3hJ-nA-8gC"/>
+                            <constraint firstItem="pww-J8-e50" firstAttribute="leading" secondItem="LiQ-A4-lnl" secondAttribute="leading" id="86L-NX-0sb"/>
+                            <constraint firstItem="pfY-nX-OJ3" firstAttribute="leading" secondItem="zs1-h7-lbc" secondAttribute="leading" id="87M-kl-C7M"/>
+                            <constraint firstItem="HkE-mb-AqZ" firstAttribute="top" secondItem="prk-ZA-o5R" secondAttribute="top" constant="30" id="8hf-7X-5HU"/>
+                            <constraint firstItem="NH7-vB-C8M" firstAttribute="trailing" secondItem="HkE-mb-AqZ" secondAttribute="trailing" id="B2G-Gp-uhk"/>
+                            <constraint firstItem="AZ9-SV-KEJ" firstAttribute="leading" secondItem="yb0-qS-02z" secondAttribute="leading" id="B7X-YZ-JcD"/>
+                            <constraint firstItem="RlV-bu-0YU" firstAttribute="leading" secondItem="AZ9-SV-KEJ" secondAttribute="leading" id="D5H-JG-2DO"/>
+                            <constraint firstItem="pww-J8-e50" firstAttribute="top" secondItem="LiQ-A4-lnl" secondAttribute="bottom" constant="20" id="Dgz-cv-GOq"/>
+                            <constraint firstItem="NH7-vB-C8M" firstAttribute="leading" secondItem="HkE-mb-AqZ" secondAttribute="leading" id="DyI-4z-HnG"/>
+                            <constraint firstItem="oAv-Wc-fgl" firstAttribute="top" secondItem="pww-J8-e50" secondAttribute="bottom" constant="8" id="FWI-3m-sa5"/>
+                            <constraint firstItem="LiQ-A4-lnl" firstAttribute="top" secondItem="pfY-nX-OJ3" secondAttribute="bottom" constant="8" id="Fs3-zv-Lqt"/>
+                            <constraint firstItem="LiQ-A4-lnl" firstAttribute="leading" secondItem="pfY-nX-OJ3" secondAttribute="leading" id="J2N-Q0-GIG"/>
+                            <constraint firstItem="AZ9-SV-KEJ" firstAttribute="top" secondItem="yb0-qS-02z" secondAttribute="bottom" constant="20" id="Otg-wQ-6Mv"/>
+                            <constraint firstItem="zs1-h7-lbc" firstAttribute="top" secondItem="818-ni-piC" secondAttribute="bottom" constant="8" id="Pfb-bq-GGi"/>
+                            <constraint firstItem="LiQ-A4-lnl" firstAttribute="trailing" secondItem="pfY-nX-OJ3" secondAttribute="trailing" id="Q4v-Ml-5Jm"/>
+                            <constraint firstItem="myY-ar-Jp8" firstAttribute="top" secondItem="RlV-bu-0YU" secondAttribute="bottom" constant="40" id="R8y-Zn-Hqr"/>
+                            <constraint firstItem="pww-J8-e50" firstAttribute="trailing" secondItem="LiQ-A4-lnl" secondAttribute="trailing" id="RUp-dW-WzA"/>
+                            <constraint firstItem="oAv-Wc-fgl" firstAttribute="leading" secondItem="pww-J8-e50" secondAttribute="leading" id="VbQ-zz-y88"/>
+                            <constraint firstItem="kYW-Pv-Y5X" firstAttribute="leading" secondItem="oAv-Wc-fgl" secondAttribute="leading" id="WQx-lt-et9"/>
+                            <constraint firstItem="zs1-h7-lbc" firstAttribute="leading" secondItem="818-ni-piC" secondAttribute="leading" id="YMX-Hz-DKj"/>
+                            <constraint firstItem="kYW-Pv-Y5X" firstAttribute="top" secondItem="oAv-Wc-fgl" secondAttribute="bottom" constant="20" id="akd-GI-mKy"/>
+                            <constraint firstItem="yb0-qS-02z" firstAttribute="trailing" secondItem="kYW-Pv-Y5X" secondAttribute="trailing" id="dYW-PB-waB"/>
+                            <constraint firstItem="NH7-vB-C8M" firstAttribute="top" secondItem="HkE-mb-AqZ" secondAttribute="bottom" constant="8" id="eCw-FX-gSw"/>
+                            <constraint firstItem="AZ9-SV-KEJ" firstAttribute="trailing" secondItem="yb0-qS-02z" secondAttribute="trailing" id="f8V-0M-76U"/>
+                            <constraint firstItem="prk-ZA-o5R" firstAttribute="trailing" secondItem="HkE-mb-AqZ" secondAttribute="trailing" constant="20" id="h1C-PV-9dT"/>
+                            <constraint firstItem="818-ni-piC" firstAttribute="top" secondItem="NH7-vB-C8M" secondAttribute="bottom" constant="20" id="hf4-Z7-U9B"/>
+                            <constraint firstItem="oAv-Wc-fgl" firstAttribute="trailing" secondItem="pww-J8-e50" secondAttribute="trailing" id="i4b-2o-AU9"/>
+                            <constraint firstItem="818-ni-piC" firstAttribute="leading" secondItem="NH7-vB-C8M" secondAttribute="leading" id="iuv-a5-VDg"/>
+                            <constraint firstItem="HkE-mb-AqZ" firstAttribute="leading" secondItem="prk-ZA-o5R" secondAttribute="leading" constant="20" id="oRi-O7-Dl9"/>
+                            <constraint firstItem="pfY-nX-OJ3" firstAttribute="trailing" secondItem="zs1-h7-lbc" secondAttribute="trailing" id="qVY-aS-MGD"/>
+                            <constraint firstItem="myY-ar-Jp8" firstAttribute="centerX" secondItem="DE2-cx-ymu" secondAttribute="centerX" id="uEy-c8-J0Y"/>
+                            <constraint firstItem="RlV-bu-0YU" firstAttribute="top" secondItem="AZ9-SV-KEJ" secondAttribute="bottom" constant="8" id="uSk-Yg-vP2"/>
+                            <constraint firstItem="818-ni-piC" firstAttribute="trailing" secondItem="NH7-vB-C8M" secondAttribute="trailing" id="veh-xD-6no"/>
+                            <constraint firstItem="zs1-h7-lbc" firstAttribute="trailing" secondItem="818-ni-piC" secondAttribute="trailing" id="xvD-od-1eR"/>
+                            <constraint firstItem="RlV-bu-0YU" firstAttribute="trailing" secondItem="AZ9-SV-KEJ" secondAttribute="trailing" id="xw4-68-lRO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="prk-ZA-o5R"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Agregar" id="J9n-Uj-jN2"/>
+                    <connections>
+                        <outlet property="txtDescription" destination="yb0-qS-02z" id="hMv-Sp-PyS"/>
+                        <outlet property="txtGenre" destination="LiQ-A4-lnl" id="0BV-lu-dpV"/>
+                        <outlet property="txtName" destination="NH7-vB-C8M" id="qN0-CO-3YY"/>
+                        <outlet property="txtNameArtist" destination="zs1-h7-lbc" id="2jy-Pc-dND"/>
+                        <outlet property="txtUrlImage" destination="RlV-bu-0YU" id="FOJ-cp-2Yl"/>
+                        <outlet property="txtYear" destination="oAv-Wc-fgl" id="9zj-DP-gF0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PMn-Il-IbR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2798.5507246376815" y="89.732142857142847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5dX-ax-fta">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bCT-4n-u3c" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qRr-gF-Mw8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uIT-DI-kz8" kind="relationship" relationship="rootViewController" id="L4f-uK-Qpo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9xS-cF-tzS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1098.5507246376812" y="73.660714285714278"/>
         </scene>
     </scenes>
 </document>

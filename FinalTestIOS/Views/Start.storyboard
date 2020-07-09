@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GqO-ef-jTH">
-                                <rect key="frame" x="20" y="118" width="374" height="127"/>
+                                <rect key="frame" x="20" y="118" width="374" height="170"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discos Unidos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEO-Fz-VBF">
                                         <rect key="frame" x="20" y="20" width="334" height="38"/>
@@ -30,11 +30,17 @@
                                         <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mT7-Tg-tI9">
-                                        <rect key="frame" x="302" y="89" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Yn-qJ-T7o">
+                                        <rect key="frame" x="257" y="108" width="97" height="42"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <state key="normal" title="Button"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="97" id="ike-jz-XWY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="20"/>
+                                        <state key="normal" title="Ir"/>
+                                        <connections>
+                                            <segue destination="Ubx-tL-fTH" kind="show" id="pUK-IQ-7xv"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -43,16 +49,59 @@
                                     <constraint firstItem="vEO-Fz-VBF" firstAttribute="top" secondItem="GqO-ef-jTH" secondAttribute="top" constant="20" id="3US-sU-tec"/>
                                     <constraint firstItem="Q1M-nL-Qh4" firstAttribute="leading" secondItem="vEO-Fz-VBF" secondAttribute="leading" id="8Ol-qp-Nm3"/>
                                     <constraint firstItem="Q1M-nL-Qh4" firstAttribute="top" secondItem="vEO-Fz-VBF" secondAttribute="bottom" constant="10" id="D9l-Fl-U8x"/>
+                                    <constraint firstItem="2Yn-qJ-T7o" firstAttribute="trailing" secondItem="Q1M-nL-Qh4" secondAttribute="trailing" id="Ola-lz-6Rp"/>
                                     <constraint firstItem="vEO-Fz-VBF" firstAttribute="leading" secondItem="GqO-ef-jTH" secondAttribute="leading" constant="20" id="P0g-3a-qaD"/>
+                                    <constraint firstItem="2Yn-qJ-T7o" firstAttribute="top" secondItem="Q1M-nL-Qh4" secondAttribute="bottom" constant="10" id="dAf-Sj-KVO"/>
                                     <constraint firstAttribute="trailing" secondItem="vEO-Fz-VBF" secondAttribute="trailing" constant="20" id="g8E-tA-1hs"/>
+                                    <constraint firstAttribute="bottom" secondItem="2Yn-qJ-T7o" secondAttribute="bottom" constant="20" id="idb-KY-m3w"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JpJ-oA-Kns">
+                                <rect key="frame" x="20" y="318" width="374" height="170"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discos Unidos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tg0-Su-UUt">
+                                        <rect key="frame" x="20" y="20" width="334" height="38"/>
+                                        <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="25"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvc-SH-1X3">
+                                        <rect key="frame" x="20" y="68" width="334" height="30"/>
+                                        <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mwv-XO-59m">
+                                        <rect key="frame" x="257" y="108" width="97" height="42"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="97" id="BfF-8X-Zhj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="20"/>
+                                        <state key="normal" title="Ir"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Jvc-SH-1X3" firstAttribute="trailing" secondItem="Tg0-Su-UUt" secondAttribute="trailing" id="1Lt-kX-c66"/>
+                                    <constraint firstItem="Mwv-XO-59m" firstAttribute="trailing" secondItem="Jvc-SH-1X3" secondAttribute="trailing" id="226-ld-kGV"/>
+                                    <constraint firstItem="Tg0-Su-UUt" firstAttribute="leading" secondItem="JpJ-oA-Kns" secondAttribute="leading" constant="20" id="2hS-QJ-gHI"/>
+                                    <constraint firstAttribute="trailing" secondItem="Tg0-Su-UUt" secondAttribute="trailing" constant="20" id="KgL-7F-XK1"/>
+                                    <constraint firstItem="Mwv-XO-59m" firstAttribute="top" secondItem="Jvc-SH-1X3" secondAttribute="bottom" constant="10" id="NSu-hz-LAg"/>
+                                    <constraint firstItem="Tg0-Su-UUt" firstAttribute="top" secondItem="JpJ-oA-Kns" secondAttribute="top" constant="20" id="Xld-ME-Csc"/>
+                                    <constraint firstItem="Jvc-SH-1X3" firstAttribute="top" secondItem="Tg0-Su-UUt" secondAttribute="bottom" constant="10" id="bxi-kd-9iB"/>
+                                    <constraint firstItem="Jvc-SH-1X3" firstAttribute="leading" secondItem="Tg0-Su-UUt" secondAttribute="leading" id="sBN-EV-FVG"/>
+                                    <constraint firstAttribute="bottom" secondItem="Mwv-XO-59m" secondAttribute="bottom" constant="20" id="vwI-Id-m6u"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="7UH-Nr-JsO" firstAttribute="bottom" secondItem="GqO-ef-jTH" secondAttribute="bottom" constant="617" id="6yn-0X-MpR"/>
+                            <constraint firstItem="JpJ-oA-Kns" firstAttribute="leading" secondItem="GqO-ef-jTH" secondAttribute="leading" id="0p7-3s-wMx"/>
                             <constraint firstItem="GqO-ef-jTH" firstAttribute="top" secondItem="7UH-Nr-JsO" secondAttribute="top" constant="30" id="9F1-tD-M5y"/>
                             <constraint firstItem="GqO-ef-jTH" firstAttribute="leading" secondItem="7UH-Nr-JsO" secondAttribute="leading" constant="20" id="Bea-tl-x5V"/>
+                            <constraint firstItem="JpJ-oA-Kns" firstAttribute="top" secondItem="GqO-ef-jTH" secondAttribute="bottom" constant="30" id="ktO-Sw-4EK"/>
+                            <constraint firstItem="JpJ-oA-Kns" firstAttribute="trailing" secondItem="GqO-ef-jTH" secondAttribute="trailing" id="mJq-zC-AzP"/>
                             <constraint firstItem="7UH-Nr-JsO" firstAttribute="trailing" secondItem="GqO-ef-jTH" secondAttribute="trailing" constant="20" id="yIX-3r-ESm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7UH-Nr-JsO"/>
@@ -66,7 +115,9 @@
         <!--Admin-->
         <scene sceneID="YFx-re-cWc">
             <objects>
-                <viewControllerPlaceholder storyboardName="Admin" id="Ubx-tL-fTH" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Admin" id="Ubx-tL-fTH" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="9wc-xt-lFs"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Op-JW-5nD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1720" y="-133"/>

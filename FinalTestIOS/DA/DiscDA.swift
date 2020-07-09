@@ -17,7 +17,7 @@ class DiscDA {
         
         objDD.disc_artist = artist
         objDD.disc_description = description
-        objDD.disc_favoriteState = String (state)
+        objDD.disc_favoriteState = state
         objDD.disc_genre = genre
         objDD.disc_name = name
         objDD.disc_urlImage = urlImage
