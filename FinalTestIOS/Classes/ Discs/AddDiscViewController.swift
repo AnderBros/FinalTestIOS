@@ -16,8 +16,54 @@ class AddDiscViewController: UIViewController {
     @IBOutlet weak var txtYear: UITextField!
     @IBOutlet weak var txtDescription: UITextField!
     @IBOutlet weak var txtUrlImage: UITextField!
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    @IBAction func tapToCloseKeyboard(_ sender: Any) {
+        self.view.endEditing(true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    registerNotifications()
+}
+
+override func viewDidDisappear(_ animated: Bool) {
+    super.viewDidDisappear(animated)
+    scrollView.contentInset.bottom = 0
+}
+
+private func registerNotifications() {
+    NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+}
+
+@objc private func keyboardWillShow(notification: NSNotification){
+    guard let keyboardFrame = notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+    scrollView.contentInset.bottom = view.convert(keyboardFrame.cgRectValue, from: nil).size.height
+}
+
+@objc private func keyboardWillHide(notification: NSNotification){
+    scrollView.contentInset.bottom = 0
+}
+    
+    /*
+    @objc func keyboardWillShow(_ notification: Notification) {
+        guard let keyboardFrameValue = notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue else {
+        return
+        }
+        let keyboardFrame = view.convert(keyboardFrameValue.cgRectValue, from: nil)
+        scrollView.contentOffset = CGPoint(x:0, y:keyboardFrame.size.height)
         
-    @IBAction func clickBtnAddBrand(_ sender: Any) {
+    }
+    
+    
+    @objc func keyboardWillHide(_ notification: Notification) {
+        
+        scrollView.contentOffset = .zero
+    }*/
+    
+    @IBAction func clickBtnAddDisc(_ sender: Any) {
             
         let name = self.txtName.text
         let nameArtist = self.txtNameArtist.text
@@ -34,19 +80,14 @@ class AddDiscViewController: UIViewController {
              
             self.showAlert(withTitle: "Error", withMessage: errorMessage, withAcceptButton: "Aceptar", withCompletion: nil)
                 
-    //            let alertAction = UIAlertAction(title: "Aceptar", style: .cancel, handler: nil)
-    //
-    //            let alertController = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
-    //            alertController.addAction(alertAction)
-    //
-    //            self.present(alertController, animated: true, completion: nil)
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        /*
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)*/
     }
 
 }

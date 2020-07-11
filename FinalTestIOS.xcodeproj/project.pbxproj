@@ -46,13 +46,14 @@
 		BF71654A24B2A2E6001285FB /* CSMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71652B24B2A2E6001285FB /* CSMView.swift */; };
 		BF71654B24B2A2E6001285FB /* CSMString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71652C24B2A2E6001285FB /* CSMString.swift */; };
 		BF71655324B2A569001285FB /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF71655224B2A569001285FB /* Start.storyboard */; };
-		BF71655524B2A80B001285FB /* DiscViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71655424B2A80B001285FB /* DiscViewController.swift */; };
 		BF71655924B2D645001285FB /* StartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF71655824B2D645001285FB /* StartCollectionViewCell.swift */; };
 		BF760CF824AEE208008377B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF760CF724AEE208008377B6 /* AppDelegate.swift */; };
 		BF760CFA24AEE208008377B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF760CF924AEE208008377B6 /* SceneDelegate.swift */; };
 		BF760D0224AEE208008377B6 /* FinalTestIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF760D0024AEE208008377B6 /* FinalTestIOS.xcdatamodeld */; };
 		BF760D0424AEE20A008377B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF760D0324AEE20A008377B6 /* Assets.xcassets */; };
 		BF760D0724AEE20A008377B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF760D0524AEE20A008377B6 /* LaunchScreen.storyboard */; };
+		BF8653AC24B984DC00615EBE /* DiscViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8653AB24B984DC00615EBE /* DiscViewController.swift */; };
+		BF8653AE24B9853700615EBE /* DiscDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8653AD24B9853700615EBE /* DiscDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,7 +96,6 @@
 		BF71652B24B2A2E6001285FB /* CSMView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMView.swift; sourceTree = "<group>"; };
 		BF71652C24B2A2E6001285FB /* CSMString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMString.swift; sourceTree = "<group>"; };
 		BF71655224B2A569001285FB /* Start.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
-		BF71655424B2A80B001285FB /* DiscViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscViewController.swift; sourceTree = "<group>"; };
 		BF71655824B2D645001285FB /* StartCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCollectionViewCell.swift; sourceTree = "<group>"; };
 		BF760CF424AEE208008377B6 /* FinalTestIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalTestIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF760CF724AEE208008377B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +104,8 @@
 		BF760D0324AEE20A008377B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF760D0624AEE20A008377B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF760D0824AEE20A008377B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF8653AB24B984DC00615EBE /* DiscViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiscViewController.swift; path = ../../../../../../.Trash/DiscViewController.swift; sourceTree = "<group>"; };
+		BF8653AD24B9853700615EBE /* DiscDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,9 +197,10 @@
 		BF71655124B2A4C5001285FB /*  Discs */ = {
 			isa = PBXGroup;
 			children = (
-				BF71655424B2A80B001285FB /* DiscViewController.swift */,
+				BF8653AB24B984DC00615EBE /* DiscViewController.swift */,
 				BF32278C24B69734005D9F26 /* DiscTableViewCell.swift */,
 				BF32278E24B69BCC005D9F26 /* AddDiscViewController.swift */,
+				BF8653AD24B9853700615EBE /* DiscDetailViewController.swift */,
 			);
 			path = " Discs";
 			sourceTree = "<group>";
@@ -318,6 +321,8 @@
 				BF71653A24B2A2E6001285FB /* CSMImage.swift in Sources */,
 				BF71654624B2A2E6001285FB /* CSMUserAlters.swift in Sources */,
 				BF71652F24B2A2E6001285FB /* CSMLabel.swift in Sources */,
+				BF8653AC24B984DC00615EBE /* DiscViewController.swift in Sources */,
+				BF8653AE24B9853700615EBE /* DiscDetailViewController.swift in Sources */,
 				BF71653724B2A2E6001285FB /* CSMSearchBar.swift in Sources */,
 				BF71653324B2A2E6001285FB /* CSMColorManager.swift in Sources */,
 				BF71653D24B2A2E6001285FB /* CSMCircularInfinityCollectionView.swift in Sources */,
@@ -349,7 +354,6 @@
 				BF71653E24B2A2E6001285FB /* CSMAutomaticStatusBarColor.swift in Sources */,
 				BF760CFA24AEE208008377B6 /* SceneDelegate.swift in Sources */,
 				BF71653B24B2A2E6001285FB /* CSMJSON.swift in Sources */,
-				BF71655524B2A80B001285FB /* DiscViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
